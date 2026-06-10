@@ -1,1 +1,13 @@
-/*    /index.html   200
+# SPA deep-links: serve the app (HTTP 200) only for real routes.
+# Anything not listed here and not an existing file falls through to
+# Netlify's automatic 404.html with a real HTTP 404 status.
+
+/                /index.html      200
+/codescanner     /index.html      200
+/schuelerhilfe   /index.html      200
+/villa-oliveto   /index.html      200
+/impressum       /index.html      200
+/datenschutz     /index.html      200
+
+# Former standalone KI-Code case study — merged into CodeScanner.
+/ki-code         /codescanner     301

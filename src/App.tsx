@@ -16,6 +16,7 @@ function App() {
           <Route path="/villa-oliveto" element={<Pages.VillaOliveto />} />
           <Route path="/impressum" element={<Pages.Impressum />} />
           <Route path="/datenschutz" element={<Pages.Datenschutz />} />
+          <Route path="*" element={<Pages.NotFound />} />
       </Routes>
       <Global.Footer />
     </BrowserRouter>

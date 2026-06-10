@@ -4,6 +4,7 @@ import { Datenschutz } from './Datenschutz';
 import { CodeScanner } from './CodeScanner';
 import { Schuelerhilfe } from './Schuelerhilfe';
 import { VillaOliveto } from './VillaOliveto';
+import { NotFound } from './NotFound';
 
 
 const Pages = {
@@ -13,6 +14,7 @@ const Pages = {
     VillaOliveto: VillaOliveto,
     Impressum: Impressum,
     Datenschutz: Datenschutz,
+    NotFound: NotFound,
 }
 
 export { Pages };
