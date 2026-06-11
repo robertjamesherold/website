@@ -21,7 +21,7 @@ const cols: Col[] = [
 
 export const Fazit = () => (
   <section className="section-y container-x reveal" data-node-id="88:16666">
-    <Component.SectionHeading num="15" label="Fazit" title="Gestaltung als Werkzeug kritischer KI-Aufsicht." />
+    <Component.SectionHeading num="14" label="Fazit" title="Gestaltung als Werkzeug kritischer KI-Aufsicht." />
 
     <div className="grid md:grid-cols-3 gap-8 lg:gap-16 mt-14 sm:mt-20">
       {cols.map((c) => (

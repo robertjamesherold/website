@@ -34,7 +34,7 @@ const heuristics: Heuristic[] = [
 
 export const KonzeptHaeltStand = () => (
   <section className="section-y container-x reveal" data-node-id="88:16328">
-    <Component.SectionHeading num="12" label="Evaluation" title="Das Konzept hält stand" />
+    <Component.SectionHeading num="11" label="Evaluation" title="Das Konzept hält stand" />
 
     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mt-14 sm:mt-20">
       {/* Thematische Analyse */}

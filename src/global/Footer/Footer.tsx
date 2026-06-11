@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import { hooks } from '@/hooks';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { isDark } = hooks.useTheme();
 
   return (
     <footer className="border-t border-line-subtle bg-bg-2">
@@ -9,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="flex items-center gap-3 text-ink-3 text-[14px]">
             <img
-              src="/favicon.svg"
+              src={isDark ? '/favicon-dark.svg' : '/favicon-light.svg'}
               alt=""
               aria-hidden="true"
               data-no-zoom

@@ -20,7 +20,7 @@ export const CodeScannerHero = () => (
   <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28 reveal">
     <Component.BackLink />
     <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3">
-      <Component.Pill>BACHELORARBEIT · UX/UI · 2025</Component.Pill>
+      <Component.Pill>BACHELORARBEIT · UX/UI · 2026</Component.Pill>
       <Component.Pill tone="warning">BEWERTET MIT 1,0</Component.Pill>
     </div>
     <div className="grid xl:grid-cols-[1.4fr_1fr] gap-12 xl:gap-20 mt-10 sm:mt-12">

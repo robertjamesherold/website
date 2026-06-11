@@ -3,7 +3,7 @@ import { Data } from '@/data';
 import { Images } from '@/assets/images';
 
 export const About = () => (
-  <section id="about" className="section-y container-x border-t border-line-subtle reveal">
+  <section id="about" className="section-y container-x border-t border-border-1 reveal">
     <Component.Eyebrow num="02" label="Über mich" />
     <h2 className="title mt-5 sm:mt-6 max-w-[18ch]">Der Mensch hinter den Projekten.</h2>
 

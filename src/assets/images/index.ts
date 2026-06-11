@@ -1,4 +1,4 @@
-import { HomeImages } from './home';
+import { HomeImages } from './Home';
 import { CodeScannerImages } from './CodeScanner';
 import { SchuelerhilfeImages } from './Schuelerhilfe';
 import { VillaOlivetoImages } from './VillaOliveto';

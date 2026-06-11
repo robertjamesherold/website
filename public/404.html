@@ -24,9 +24,9 @@
       })();
     </script>
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -111,6 +111,19 @@
       }
 
       a { color: inherit; text-decoration: none; }
+
+      /* Theme-aware logo: show the variant whose card contrasts the page.
+         Mirrors the color logic above (OS preference + forced data-theme). */
+      .logo-dark { display: none; }
+      .logo-light { display: inline-block; }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) .logo-light { display: none; }
+        :root:not([data-theme='light']) .logo-dark { display: inline-block; }
+      }
+      :root[data-theme='dark'] .logo-light { display: none; }
+      :root[data-theme='dark'] .logo-dark { display: inline-block; }
+      :root[data-theme='light'] .logo-light { display: inline-block; }
+      :root[data-theme='light'] .logo-dark { display: none; }
 
       /* --- Top bar --- */
       .nav {
@@ -226,7 +239,8 @@
     <header class="nav">
       <div class="nav__inner">
         <a class="brand" href="/" aria-label="Robert James Herold — Startseite">
-          <img src="/favicon.svg" alt="" aria-hidden="true" width="32" height="32" />
+          <img class="logo-light" src="/favicon-light.svg" alt="" aria-hidden="true" width="32" height="32" />
+          <img class="logo-dark" src="/favicon-dark.svg" alt="" aria-hidden="true" width="32" height="32" />
           <span>Robert James Herold</span>
         </a>
       </div>
@@ -248,7 +262,8 @@
     <footer>
       <div class="footer__inner">
         <div class="footer__brand">
-          <img src="/favicon.svg" alt="" aria-hidden="true" width="24" height="24" />
+          <img class="logo-light" src="/favicon-light.svg" alt="" aria-hidden="true" width="24" height="24" />
+          <img class="logo-dark" src="/favicon-dark.svg" alt="" aria-hidden="true" width="24" height="24" />
           <span>&copy; 2026 Robert James Herold. All rights reserved.</span>
         </div>
         <nav class="footer__links">

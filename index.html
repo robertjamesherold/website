@@ -36,13 +36,19 @@
     </script>
 
     <!-- Favicons -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <!-- Adaptive SVG (modern browsers): recolors itself for light/dark via prefers-color-scheme -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.png" />
+    <!-- Legacy fallback -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <!-- PNG fallbacks — light scheme (dark card) -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" media="(prefers-color-scheme: light)" />
+    <!-- PNG fallbacks — dark scheme (light card) -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16-dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32-dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48-dark.png" media="(prefers-color-scheme: dark)" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />

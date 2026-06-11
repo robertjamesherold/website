@@ -102,7 +102,7 @@ export const NavBar = () => {
             className="flex items-center gap-2.5 sm:gap-3"
           >
             <img
-              src="/favicon.svg"
+              src={isDark ? '/favicon-dark.svg' : '/favicon-light.svg'}
               alt=""
               aria-hidden="true"
               width={32}

@@ -53,7 +53,7 @@ export const DesignSystem = () => (
   <section className="section-y container-x reveal">
     <div className="grid xl:grid-cols-2 gap-10 xl:gap-20 items-start">
       <div>
-        <Component.Eyebrow num="11" label="DESIGNSYSTEM" />
+        <Component.Eyebrow num="10" label="DESIGNSYSTEM" />
         <h2 className="title mt-5 sm:mt-6">Konsistenz als Voraussetzung für Vertrauen</h2>
       </div>
       <div className="flex flex-col gap-5 lede">

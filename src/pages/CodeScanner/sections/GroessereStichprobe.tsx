@@ -23,7 +23,7 @@ const cardShadow = 'var(--shadow-card)';
 export const GroessereStichprobe = () => (
   <section className="section-y container-x reveal" data-node-id="88:16505">
     <Component.SectionHeading
-      num="14"
+      num="13"
       label="Ausblick"
       title="Größere Stichprobe als nächster Schritt"
       sub="Eine breit angelegte Folgestudie würde die Tragfähigkeit des Konzepts empirisch absichern & gezielt einzelne Heuristiken weiterentwickeln."

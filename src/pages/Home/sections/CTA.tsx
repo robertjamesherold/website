@@ -2,9 +2,9 @@ import { Component } from '@/components';
 import { Icon } from '@/assets/icons';
 
 const CTA = () => (
-  <section id="contact" className="py-24 sm:py-32 lg:py-40 px-6 sm:px-10 flex justify-center reveal">
+  <section id="contact" className="section-y container-x pt-20 sm:pt-24 lg:pt-28 flex justify-center reveal">
     <div
-      className="max-w-275  card-base  w-full text-center flex flex-col gap-6 items-center rounded-md border border-primary/30 px-8 sm:px-12 lg:px-16 py-16 sm:py-20 lg:py-24"
+      className="max-w-full  card-base  w-full text-center flex flex-col gap-6 items-center rounded-md border border-primary/30 px-8 sm:px-12 lg:px-16 py-16 sm:py-20 lg:py-24"
       style={{
         background: 'var(--background-gradient)', // Use the CSS variable for the background gradient
       }}
