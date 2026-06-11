@@ -1,10 +1,10 @@
-/* import { Component } from '@/components';
+import { Component } from '@/components';
 import { hooks } from '@/hooks';
 
 const FIGMA_LIGHT =
-  'https://embed.figma.com/proto/foYKfSccKni6d8dWID97ci/Komponenten?node-id=393-4485&viewport=40%2C603%2C0.08&scaling=contain&content-scaling=fixed&starting-point-node-id=393%3A4485&page-id=390%3A4483&embed-host=share';
+  'https://dulcet-axolotl-191c40.netlify.app/home';
 const FIGMA_DARK =
-  'https://embed.figma.com/proto/foYKfSccKni6d8dWID97ci/Komponenten?node-id=393-7950&viewport=588%2C562%2C0.11&scaling=contain&content-scaling=fixed&starting-point-node-id=393%3A7950&page-id=393%3A7949&embed-host=share';
+  'https://dulcet-axolotl-191c40.netlify.app/home';
 
 export const Prototyp = () => {
   const { isDark } = hooks.useTheme();
@@ -33,4 +33,3 @@ export const Prototyp = () => {
     </section>
   );
 };
- */
