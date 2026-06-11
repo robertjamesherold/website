@@ -13,7 +13,6 @@ export const CodeScanner = () => {
       <Sections.DreiPerspektiven />
       <Sections.IterativerProzess />
       <Sections.Loesung />
-  <Sections.Prototyp /> 
      <Sections.DesignSystem />
       <Sections.KonzeptHaeltStand />
       <Sections.GrenzenDokumentiert />

@@ -4,6 +4,12 @@ import { Icon } from '@/assets/icons';
 import { Images } from '@/assets/images';
 import { Caption } from '../components';
 import type { ResponsiveSource, ThemedSource } from '@/components/ResponsiveImage';
+import { hooks } from '@/hooks';
+
+const FIGMA_LIGHT =
+  'https://dulcet-axolotl-191c40.netlify.app/home';
+const FIGMA_DARK =
+  'https://dulcet-axolotl-191c40.netlify.app/home';
 
 type ImageSource = ResponsiveSource | ThemedSource;
 
@@ -24,11 +30,12 @@ const Step = ({ n, title, tone, icon }: { n: string; title: string; tone: StepTo
   </div>
 );
 
-type IxTone = 'blue' | 'cyan' | 'violet';
+type IxTone = 'blue' | 'cyan' | 'violet' | 'success';
 const ixStyles: Record<IxTone, string> = {
   blue:   'bg-quality/20 text-quality',
   cyan:   'bg-security/20 text-security',
   violet: 'bg-performance/20 text-performance',
+  success: 'bg-success/20 text-success',
 };
 
 const ItemHeading = ({ ix, ixTone, label, title }: { ix: string; ixTone: IxTone; label: string; title: string }) => (
@@ -61,7 +68,10 @@ const Item = ({
   </article>
 );
 
-export const Loesung = () => (
+export const Loesung = () =>{ 
+    const { isDark } = hooks.useTheme();
+  const src = isDark ? FIGMA_DARK : FIGMA_LIGHT;
+return (
   <section className="section-y container-x reveal">
     <Component.SectionHeading
       num="09" label="DIE LÖSUNG"
@@ -77,19 +87,19 @@ export const Loesung = () => (
       <Step n="03" title="Optimieren" tone="violet" icon={<Icon.Chart width={28} height={28} />} />
     </div>
 
-    <Item ix="5.1" ixTone="blue" label="BEREINIGEN" title="Struktur vor Sicherheit"
+    <Item ix="9.1" ixTone="blue" label="BEREINIGEN" title="Struktur vor Sicherheit"
       lede="Bevor Sicherheits- oder Performance-Probleme analysiert werden, geht es um die Grundlage: Redundanz, Ballast und Strukturklarheit. Doppelte Dateien, ungenutzte Pakete, inkonsistente Benennungen werden gebündelt und mit dreistufiger Konfidenzklassifikation versehen – damit klar ist, was sicher automatisierbar ist und was menschliches Urteil braucht."
       image={Images.CodeScannerImages.Prototyp1}
     />
     <Caption>Die Bereinigungsphase reduziert Komplexität, bevor sicherheits- und qualitätskritische Analysen ansetzen.</Caption>
 
-    <Item ix="5.2" ixTone="cyan" label="ABSICHERN" title="Sicherheitsbefunde mit Kontext" reverse
+    <Item ix="9.2" ixTone="cyan" label="ABSICHERN" title="Sicherheitsbefunde mit Kontext" reverse
       lede="Im Sicherheitsbereich werden Befunde nach Severity-Stufen (Kritisch › Hoch › Mittel › Niedrig) gegliedert und mit den offiziellen CWE-Codes (Common Weakness Enumeration) der MITRE-Klassifikation verknüpft. Jeder Befund zeigt Vorher-/Nachher-Code-Vergleich, betroffene Datei und Zeilennummer sowie eine kontextbezogene Erklärung des Problems – damit Nutzende nicht nur sehen was, sondern auch warum."
       image={Images.CodeScannerImages.Prototyp2}
     />
     <Caption>Pattern-basierte Befundgruppierung mit dateibezogener Detailansicht. Der direkte Vorher-/Nachher-Vergleich macht die Wirkung jeder Änderung nachvollziehbar.</Caption>
 
-    <Item ix="5.3" ixTone="violet" label="OPTIMIEREN" title="Qualität schrittweise verbessern"
+    <Item ix="9.3" ixTone="violet" label="OPTIMIEREN" title="Qualität schrittweise verbessern"
       lede="Im Optimierungsbereich liegt der Fokus weniger auf Kritikalität, sondern auf schrittweiser Verbesserung. Bundle-Größe, Performance, Architektur, API-Effizienz – jede Kategorie wird in eigener Tiefe behandelt, mit demselben Vertrauensprinzip wie in den vorherigen Schritten: Vorschläge, keine Vorgaben."
       image={Images.CodeScannerImages.Prototyp3}
     />
@@ -98,7 +108,7 @@ export const Loesung = () => (
     {/* 5.4 Übersicht – text top, full-width image below */}
     <article className="mt-20 sm:mt-28 reveal">
       <div className="max-w-275">
-        <ItemHeading ix="5.4" ixTone="blue" label="ÜBERSICHT" title="Der rote Faden" />
+        <ItemHeading ix="9.4" ixTone="blue" label="ÜBERSICHT" title="Der rote Faden" />
         <p className="lede">
           Verbindendes Element ist die Projektübersicht: Hier laufen empfohlene nächste Schritte, Sicherheitswarnungen,
           Bereichszusammenfassungen und der Risikoverlauf zusammen. Nutzende behalten jederzeit den Überblick – und können
@@ -113,5 +123,26 @@ export const Loesung = () => (
       />
     </article>
     <Caption>Die Übersicht verdichtet alle drei Workflow-Bereiche zu einer einzigen Handlungsempfehlung – der „empfohlene nächste Schritt" als roter Faden durch das Tool.</Caption>
+        <article className="mt-20 sm:mt-28 reveal hidden 2xl:block">
+      <div className="max-w-275">
+        <ItemHeading ix="9.5" ixTone="success" label="Prototyp" title="CodeScanner zum Anfassen" />
+        <p className="lede">
+         Der finale Prototyp bildet den Bearbeitungspfad vollständig ab – Übersicht, Bereinigen, Absichern und Optimieren als zusammenhängende Klickstrecke. Nutzende erleben den geführten Workflow direkt im Browser.
+        </p>
+      </div>
+       <div className="mt-12 sm:mt-16 rounded-md border border-border-2 bg-grouped-1 " style={{ boxShadow: 'var(--shadow-card)' }}>
+        <div className="relative w-full aspect-video overflow-hidden rounded-md bg-bg-1">
+          <iframe
+            key={src}
+            src={src}
+            title="CodeScanner – Interaktiver Figma-Prototyp"
+            loading="lazy"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+      </div>
+      </article>
   </section>
 );
+}

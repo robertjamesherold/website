@@ -8,7 +8,6 @@ import { DreiPerspektiven } from './DreiPerspektiven';
 import { IterativerProzess } from './IterativerProzess';
 import { Loesung } from './Loesung';
 import { VertrauenKalibrieren } from './VertrauenKalibrieren';
- import { Prototyp } from './Prototyp'; 
 import { DesignSystem } from './DesignSystem';
 import { KonzeptHaeltStand } from './KonzeptHaeltStand';
 import { GrenzenDokumentiert } from './GrenzenDokumentiert';
@@ -27,7 +26,6 @@ export const Sections = {
   DreiPerspektiven,
   IterativerProzess,
   Loesung,
-  Prototyp,
   DesignSystem,
   KonzeptHaeltStand,
   GrenzenDokumentiert,
