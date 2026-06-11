@@ -48,7 +48,7 @@ export const DreiPerspektiven = () => (
           <div className={`h-1 w-12 rounded-full ${bg[c.tone]} mb-9 transition-[width] duration-500 ease-out group-hover:w-20`} />
 
           <div className={`mono text-sm font-bold tracking-[.2em] uppercase ${txt[c.tone]} mb-4`}>{c.kicker}</div>
-          <h3 className="text-xl sm:text-2xl font-extrabold tracking-tightish leading-tight mb-10 text-text-1">
+          <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight leading-tight mb-10 text-text-1">
             {c.title[0]}<br />{c.title[1]}
           </h3>
 

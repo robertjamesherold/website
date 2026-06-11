@@ -41,7 +41,7 @@ export const Storyboard = () => (
 
     <div className="mt-12 grid lg:grid-cols-[1fr_1fr] gap-10">
       <div>
-        <h4 className="text-lg font-bold tracking-tightish mb-3">Übergangslogik</h4>
+        <h4 className="text-lg font-bold tracking-tight mb-3">Übergangslogik</h4>
         <ul className="space-y-3 text-text-2 text-[15px] leading-relaxed pl-5 list-disc marker:text-primary">
           <li>Sanfte Überblendungen in den Traumsequenzen → Fluss, Rhythmus</li>
           <li>Maskierte Wipes zwischen den Berufen → Flow ohne harte Schnitte</li>

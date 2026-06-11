@@ -23,7 +23,7 @@ export const Hero = () => (
           <Component.Button href="#work" icon={<Icon.Briefcase />}>Projekte ansehen</Component.Button>
           <Component.Button variant="secondaryOutlined" href="#contact" icon={<Icon.Send />}>Kontaktiere mich</Component.Button>
         </div>
-        <ul className="grid grid-cols-2 xl:grid-cols-4 gap-6 mt-12 sm:mt-16 pt-8 border-t border-line-subtle max-w-195">
+        <ul className="grid grid-cols-2 xl:grid-cols-4 gap-6 mt-12 sm:mt-16 pt-8 border-t border-border-2 max-w-195">
           {data.stats.map((s) => (
             <li key={s.b} className="flex flex-col gap-1">
               <b className="text-2xl sm:text-3xl font-bold text-primary">{s.b}</b>

@@ -6,9 +6,11 @@ import {Button} from './Button';
 import {Eyebrow} from './Eyebrow';
 import {ResponsiveImg} from './ResponsiveImage';
 import {BackLink} from './BackLink';
+import {Reveal} from './Reveal';
 
 export const Component = {
   BackLink: BackLink,
+  Reveal: Reveal,
   Pill: Pill,
   Card: Card,
   SectionHeading: SectionHeading,

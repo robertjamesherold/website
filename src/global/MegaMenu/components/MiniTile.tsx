@@ -52,7 +52,7 @@ const MiniTile = ({
         )}
       </div>
       <div className="p-4 flex flex-col gap-1.5">
-        <div className="text-[15px] font-bold tracking-tightish text-text-1">{work.title}</div>
+        <div className="text-[15px] font-bold tracking-tight text-text-1">{work.title}</div>
         <div className="mono text-[10px] tracking-[.18em] text-text-3 uppercase line-clamp-1">
           {work.context}
         </div>

@@ -5,19 +5,19 @@ const Impressum = () => (
   <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28">
     <Link
       to="/"
-      className="inline-flex items-center gap-2 mono text-[11px] sm:text-[12px] tracking-[.18em] text-ink-3 hover:text-ink-1 transition uppercase"
+      className="inline-flex items-center gap-2 mono text-[11px] sm:text-[12px] tracking-[.18em] text-text-3 hover:text-text-1 transition uppercase"
     >
       <span aria-hidden>←</span>
          Zur Übersicht
     </Link>
 
-    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tightish mt-10">
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-10">
       Impressum
     </h1>
 
-    <div className="mt-12 max-w-[720px] space-y-10 text-ink-2 text-[15px] sm:text-base leading-relaxed">
+    <div className="mt-12 max-w-[720px] space-y-10 text-text-2 text-[15px] sm:text-base leading-relaxed">
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           Angaben gemäß § 5 TMG
         </h2>
         <p>
@@ -28,7 +28,7 @@ const Impressum = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">Kontakt</h2>
+        <h2 className="text-lg font-semibold text-text-1 mb-3">Kontakt</h2>
         <p>
           Telefon: +49 151 61660444<br />
           E-Mail: robertjamesherold@icloud.com
@@ -36,7 +36,7 @@ const Impressum = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
         </h2>
         <p>
@@ -47,7 +47,7 @@ const Impressum = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           EU-Streitschlichtung
         </h2>
         <p>
@@ -57,7 +57,7 @@ const Impressum = () => (
             href="https://ec.europa.eu/consumers/odr/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-soft hover:underline"
+            className="text-primary hover:underline"
           >
             https://ec.europa.eu/consumers/odr/
           </a>
@@ -69,7 +69,7 @@ const Impressum = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           Haftung für Inhalte
         </h2>
         <p>
@@ -91,7 +91,7 @@ const Impressum = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           Haftung für Links
         </h2>
         <p>
@@ -112,7 +112,7 @@ const Impressum = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">Urheberrecht</h2>
+        <h2 className="text-lg font-semibold text-text-1 mb-3">Urheberrecht</h2>
         <p>
           Die durch mich erstellten Inhalte und Werke auf diesen Seiten
           unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,

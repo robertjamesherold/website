@@ -19,7 +19,7 @@ export const ZielgruppePositionierung = () => (
     <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mt-12">
       <div className="card-base flex flex-col gap-4 p-7">
         <div className="mono text-[11px] tracking-[.18em] text-primary uppercase">Persona 01</div>
-        <h3 className="text-2xl font-bold tracking-tightish">Marko</h3>
+        <h3 className="text-2xl font-bold tracking-tight">Marko</h3>
         <p className="text-text-2 text-[15px] leading-relaxed">
           Lifestyle-orientierter Genießer mit hohem Lebensstandard. Bereit, für Qualität
           mehr zu bezahlen, sofern Optik und Geschmack überzeugen.
@@ -27,7 +27,7 @@ export const ZielgruppePositionierung = () => (
       </div>
       <div className="card-base flex flex-col gap-4 p-7">
         <div className="mono text-[11px] tracking-[.18em] text-primary uppercase">Persona 02</div>
-        <h3 className="text-2xl font-bold tracking-tightish">Silvia</h3>
+        <h3 className="text-2xl font-bold tracking-tight">Silvia</h3>
         <p className="text-text-2 text-[15px] leading-relaxed">
           Sterneköchin – fachlich anspruchsvoll. Will durch Authentizität und Qualität
           überzeugt werden, nicht durch Marketing.

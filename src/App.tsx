@@ -1,8 +1,11 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Pages } from '@/pages'
 import { Global } from '@/global';
+import { hooks } from '@/hooks';
 
 function App() {
+  hooks.useSmoothScroll();
+
   return (
     <BrowserRouter>
       <Global.NavBar />

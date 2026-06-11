@@ -21,7 +21,7 @@ const ProjectsContent = ({ route }: { route: string }) => (
         <div className="mono text-[10px] tracking-[.22em] text-primary uppercase">
           Übersicht
         </div>
-        <div className="text-2xl sm:text-3xl font-bold tracking-tightish mt-3 leading-tight text-text-1">
+        <div className="text-2xl sm:text-3xl font-bold tracking-tight mt-3 leading-tight text-text-1">
           Zurück zur<br />Startseite
         </div>
         <p className="text-text-2 text-[14px] leading-relaxed mt-4 max-w-[260px]">

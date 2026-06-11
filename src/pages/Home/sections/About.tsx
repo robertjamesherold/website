@@ -30,7 +30,7 @@ export const About = () => (
 
       <div className="relative card-base p-0 order-1 lg:order-2 w-full max-w-140 mx-auto lg:mx-0 lg:justify-self-end">
         <div className="absolute -inset-3 sm:-inset-4 -z-10 rounded-md bg-primary/10 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4" />
-        <div className="relative aspect-video rounded-md overflow-hidden border border-line-subtle bg-grouped-1">
+        <div className="relative aspect-video rounded-md overflow-hidden border border-border-2 bg-grouped-1">
           <Component.ResponsiveImg
             image={Images.HomeImages.Landscape}
             sizes="(min-width: 1024px) 45vw, (min-width: 640px) 80vw, 100vw"
@@ -41,7 +41,7 @@ export const About = () => (
       </div>
     </div>
 
-    <div className="mt-16 sm:mt-20 pt-8 border-t border-line-subtle grid sm:grid-cols-3 gap-6 sm:gap-10">
+    <div className="mt-16 sm:mt-20 pt-8 border-t border-border-2 grid sm:grid-cols-3 gap-6 sm:gap-10">
       {Data.HomePage.About.meta.map((m) => (
         <div key={m.k} className="flex flex-col gap-1.5">
           <div className="mono text-[10px] tracking-[.22em] text-text-3 uppercase">{m.k}</div>
@@ -68,7 +68,7 @@ export const About = () => (
         {Data.HomePage.About.skills.map((s) => (
           <span
             key={s}
-            className="inline-flex items-center px-3 py-1.5 rounded-full text-[13px] text-text-2 border border-line-subtle"
+            className="inline-flex items-center px-3 py-1.5 rounded-full text-[13px] text-text-2 border border-border-2"
           >
             {s}
           </span>

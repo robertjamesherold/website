@@ -22,11 +22,11 @@ export const WorkGrid = () => (
         <Link          
           key={w.href}
           to={w.href}
-         className="group relative card-base bg-grouped-1 border border-line-subtle rounded-md overflow-hidden flex flex-col p-0 transition hover:border-line shadow-[var(--shadow-card)]"
+         className="group relative card-base bg-grouped-1 border border-border-2 rounded-md overflow-hidden flex flex-col p-0 transition hover:border-border-1 shadow-[var(--shadow-card)]"
           style={{ paddingBottom: 0, paddingTop: 0, paddingLeft: 0, paddingRight: 0 }}
         >
           {/* Preview image */}
-          <div className="relative aspect-16/10 overflow-hidden border-b border-line-subtle bg-grouped-2">
+          <div className="relative aspect-16/10 overflow-hidden border-b border-border-2 bg-grouped-2">
             <Component.ResponsiveImg
               image={w.image.source}
               sizes="(min-width: 640px) 50vw, 100vw"
@@ -48,7 +48,7 @@ export const WorkGrid = () => (
               {w.context}
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-bold tracking-tightish">
+            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
               {w.title}
             </h3>
 
@@ -66,7 +66,7 @@ export const WorkGrid = () => (
               ))}
             </ul>
 
-            <div className="flex items-center justify-end mt-auto pt-5 border-t border-line-subtle">
+            <div className="flex items-center justify-end mt-auto pt-5 border-t border-border-2">
               <span className="inline-flex items-center gap-2 text-[13px] font-semibold text-primary group-hover:translate-x-1 transition-transform">
                 Case Study ansehen
                 <Icon.ArrowRight width="16px" height="16px" />

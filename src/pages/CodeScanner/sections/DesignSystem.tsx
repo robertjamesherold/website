@@ -97,7 +97,7 @@ export const DesignSystem = () => (
         <div className="flex flex-col items-center text-center gap-4 sm:gap-5">
           <div className="text-[52px] sm:text-[110px] lg:text-[88px] xl:text-[130px] 2xl:text-[150px] font-medium leading-none">Aa Bb</div>
           <div className="bg-border-1 h-px w-1/3 my-2 sm:my-3" />
-          <div className="text-4xl sm:text-6xl lg:text-5xl xl:text-7xl tracking-tightish leading-none">Figtree</div>
+          <div className="text-4xl sm:text-6xl lg:text-5xl xl:text-7xl tracking-tight leading-none">Figtree</div>
           <p className="m-0 mt-4 sm:mt-5 text-sm sm:text-base lg:text-sm xl:text-lg leading-[1.9] tracking-[.06em] sm:tracking-[.08em]">
             A&thinsp;a B&thinsp;b C&thinsp;c D&thinsp;d E&thinsp;e F&thinsp;f G&thinsp;g H&thinsp;h I&thinsp;i J&thinsp;j
             <br />

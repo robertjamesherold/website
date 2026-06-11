@@ -14,7 +14,7 @@ const ContactContent = () => (
       />
       <div>
     
-        <div className="text-xl sm:text-2xl font-bold tracking-tightish mt-3 leading-tight">
+        <div className="text-xl sm:text-2xl font-bold tracking-tight mt-3 leading-tight">
           Lass uns reden.
         </div>
         <p className="text-text-2 text-[13px] leading-relaxed mt-3">

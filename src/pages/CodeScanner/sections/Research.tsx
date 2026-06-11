@@ -66,7 +66,7 @@ export const Research = () => (
             </div>
           </header>
           <blockquote className="m-0 text-lg leading-snug border-l-2 border-primary pl-4 italic">„{p.quote}"</blockquote>
-          <p className="text-text-3 text-md leading-snug m-0">{p.desc}</p>
+          <p className="text-text-3 text-base leading-snug m-0">{p.desc}</p>
         </Component.Card>
       ))}
     </div>

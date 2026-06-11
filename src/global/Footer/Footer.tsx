@@ -6,10 +6,10 @@ const Footer = () => {
   const { isDark } = hooks.useTheme();
 
   return (
-    <footer className="border-t border-line-subtle bg-bg-2">
+    <footer className="border-t border-border-2 bg-bg-2">
       <div className="mx-auto max-w-[1760px] px-6 sm:px-10 lg:px-20 py-10 sm:py-12">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="flex items-center gap-3 text-ink-3 text-[14px]">
+          <div className="flex items-center gap-3 text-text-3 text-[14px]">
             <img
               src={isDark ? '/favicon-dark.svg' : '/favicon-light.svg'}
               alt=""
@@ -28,20 +28,20 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Lebenslauf als PDF in neuem Tab öffnen"
-              className="text-ink-3 hover:text-ink-1 transition"
+              className="text-text-3 hover:text-text-1 transition"
             >
               Lebenslauf (PDF)
             </Link>
             <Link
               to="/impressum"
-        className="text-ink-3 hover:text-ink-1 transition"
+        className="text-text-3 hover:text-text-1 transition"
             >
               Impressum
             </Link>
             <Link
               to="/datenschutz"
               
-              className="text-ink-3 hover:text-ink-1 transition"
+              className="text-text-3 hover:text-text-1 transition"
             >
               Datenschutz
             </Link>

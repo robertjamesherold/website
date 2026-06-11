@@ -5,22 +5,22 @@ export const Datenschutz = () => (
   <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28">
     <Link
       to="/"
-      className="inline-flex items-center gap-2 mono text-[11px] sm:text-[12px] tracking-[.18em] text-ink-3 hover:text-ink-1 transition uppercase"
+      className="inline-flex items-center gap-2 mono text-[11px] sm:text-[12px] tracking-[.18em] text-text-3 hover:text-text-1 transition uppercase"
     >
       <span aria-hidden>←</span>
       <span>Zur Übersicht</span>
     </Link>
 
-    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tightish mt-10">
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-10">
       Datenschutzerklärung
     </h1>
 
-    <div className="mt-12 max-w-[720px] space-y-10 text-ink-2 text-[15px] sm:text-base leading-relaxed">
+    <div className="mt-12 max-w-[720px] space-y-10 text-text-2 text-[15px] sm:text-base leading-relaxed">
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           1. Datenschutz auf einen Blick
         </h2>
-        <h3 className="font-medium text-ink-1 mt-4 mb-2">Allgemeine Hinweise</h3>
+        <h3 className="text-base font-medium text-text-1 mt-4 mb-2">Allgemeine Hinweise</h3>
         <p>
           Die folgenden Hinweise geben einen einfachen Überblick darüber, was
           mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website
@@ -30,7 +30,7 @@ export const Datenschutz = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           2. Verantwortliche Stelle
         </h2>
         <p>
@@ -54,11 +54,11 @@ export const Datenschutz = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           3. Datenerfassung auf dieser Website
         </h2>
 
-        <h3 className="font-medium text-ink-1 mt-4 mb-2">
+        <h3 className="text-base font-medium text-text-1 mt-4 mb-2">
           Wer ist verantwortlich für die Datenerfassung auf dieser Website?
         </h3>
         <p>
@@ -67,7 +67,7 @@ export const Datenschutz = () => (
           „Verantwortliche Stelle" in dieser Datenschutzerklärung entnehmen.
         </p>
 
-        <h3 className="font-medium text-ink-1 mt-4 mb-2">
+        <h3 className="text-base font-medium text-text-1 mt-4 mb-2">
           Wie erfasse ich Ihre Daten?
         </h3>
         <p>
@@ -83,7 +83,7 @@ export const Datenschutz = () => (
           sobald Sie diese Website betreten.
         </p>
 
-        <h3 className="font-medium text-ink-1 mt-4 mb-2">
+        <h3 className="text-base font-medium text-text-1 mt-4 mb-2">
           Wofür nutze ich Ihre Daten?
         </h3>
         <p>
@@ -93,7 +93,7 @@ export const Datenschutz = () => (
           der Kontaktaufnahme und deren Abwicklung verarbeitet.
         </p>
 
-        <h3 className="font-medium text-ink-1 mt-4 mb-2">
+        <h3 className="text-base font-medium text-text-1 mt-4 mb-2">
           Welche Rechte haben Sie bezüglich Ihrer Daten?
         </h3>
         <p>
@@ -114,7 +114,7 @@ export const Datenschutz = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           4. Hosting
         </h2>
         <p>
@@ -135,7 +135,7 @@ export const Datenschutz = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           5. Kontaktaufnahme
         </h2>
         <p>
@@ -164,7 +164,7 @@ export const Datenschutz = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           6. Ihre Rechte
         </h2>
         <p>Sie haben gegenüber mir folgende Rechte hinsichtlich Ihrer Daten:</p>
@@ -185,7 +185,7 @@ export const Datenschutz = () => (
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold text-ink-1 mb-3">
+        <h2 className="text-lg font-semibold text-text-1 mb-3">
           7. SSL-/TLS-Verschlüsselung
         </h2>
         <p>
@@ -202,8 +202,8 @@ export const Datenschutz = () => (
         </p>
       </div>
 
-      <div className="pt-6 border-t border-line-subtle">
-        <p className="text-ink-3 text-sm">
+      <div className="pt-6 border-t border-border-2">
+        <p className="text-text-3 text-sm">
           Stand: Mai 2026
         </p>
       </div>

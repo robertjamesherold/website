@@ -29,7 +29,7 @@ export const Markenwelt = () => (
       {/* 03.1 Produktdesign */}
       <div>
         <div className="mono text-[11px] tracking-[.22em] text-primary uppercase">03.1 · Produktdesign</div>
-        <h3 className="text-2xl sm:text-3xl font-bold tracking-tightish mt-3 mb-5">
+        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mt-3 mb-5">
           Drei Sorten, ein strukturelles System
         </h3>
         <p className="lede max-w-225">
@@ -65,7 +65,7 @@ export const Markenwelt = () => (
       {/* 03.3 Social Media */}
       <div>
         <div className="mono text-[11px] tracking-[.22em] text-primary uppercase">03.2 · Social Media</div>
-        <h3 className="text-2xl sm:text-3xl font-bold tracking-tightish mt-3 mb-5">
+        <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mt-3 mb-5">
           Drei Content-Typen, ein Markenkern
         </h3>
         <p className="lede max-w-225">
@@ -103,7 +103,7 @@ export const Markenwelt = () => (
         </div>
 
         <div className="mt-16 sm:mt-20">
-          <h4 className="text-lg sm:text-xl font-bold tracking-tightish mb-5">Im Profil-Kontext</h4>
+          <h4 className="text-lg sm:text-xl font-bold tracking-tight mb-5">Im Profil-Kontext</h4>
           <div className="flex justify-center">
             <Component.ResponsiveImg
               image={Img.Instagram}

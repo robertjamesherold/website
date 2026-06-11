@@ -24,6 +24,9 @@ export const NavBar = () => {
 
   const closeTimer = useRef<number | null>(null);
   const scrollYRef = useRef(0);
+  // Pathname captured when the menu opened, so we can tell a plain close
+  // (stay → restore scroll) apart from a close caused by navigating away.
+  const lockedPathRef = useRef(pathname);
 
   const cancelClose = () => {
     if (closeTimer.current !== null) {
@@ -50,6 +53,7 @@ export const NavBar = () => {
   useEffect(() => {
     if (activeMenu !== null) {
       scrollYRef.current = window.scrollY;
+      lockedPathRef.current = pathname;
 
       document.body.style.position = 'fixed';
       document.body.style.top = `-${scrollYRef.current}px`;
@@ -63,12 +67,17 @@ export const NavBar = () => {
       document.body.style.right = '';
       document.body.style.overflow = '';
 
-      const html = document.documentElement;
-      const prevBehavior = html.style.scrollBehavior;
+      // Only restore the locked scroll position when the menu closes on the
+      // SAME page. If the menu closed because the user navigated to another
+      // route, leave it to ScrollToTop so the new page starts at the top.
+      if (pathname === lockedPathRef.current) {
+        const html = document.documentElement;
+        const prevBehavior = html.style.scrollBehavior;
 
-      html.style.scrollBehavior = 'auto';
-      window.scrollTo(0, scrollYRef.current);
-      html.style.scrollBehavior = prevBehavior;
+        html.style.scrollBehavior = 'auto';
+        window.scrollTo(0, scrollYRef.current);
+        html.style.scrollBehavior = prevBehavior;
+      }
     }
 
     return () => {
@@ -78,11 +87,11 @@ export const NavBar = () => {
       document.body.style.right = '';
       document.body.style.overflow = '';
     };
-  }, [activeMenu]);
+  }, [activeMenu, pathname]);
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-bg-2 border-b border-line-subtle">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-bg-2 border-b border-border-2">
         <div className="mx-auto max-w-440 px-6 sm:px-10 lg:px-20 py-4 flex items-center">
           <a
             href="/"
@@ -110,7 +119,7 @@ export const NavBar = () => {
               className="w-7 h-7 sm:w-8 sm:h-8 shrink-0"
             />
 
-            <span className="font-bold tracking-tightish text-base sm:text-lg">
+            <span className="font-bold tracking-tight text-base sm:text-lg">
               Robert James Herold
             </span>
           </a>

@@ -44,7 +44,7 @@ const ItemHeading = ({ ix, ixTone, label, title }: { ix: string; ixTone: IxTone;
       <span className={`inline-flex w-11 h-7 items-center justify-center rounded-md mono text-[13px] font-semibold ${ixStyles[ixTone]}`}>{ix}</span>
       <span className="mono text-[11px] tracking-[.16em] text-text-3">{label}</span>
     </div>
-    <h3 className="text-2xl sm:text-3xl font-bold tracking-tightish leading-[1.1] m-0 mb-4">{title}</h3>
+    <h3 className="text-2xl sm:text-3xl font-bold tracking-tight leading-[1.1] m-0 mb-4">{title}</h3>
   </>
 );
 

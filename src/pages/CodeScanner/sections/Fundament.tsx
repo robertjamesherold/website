@@ -31,7 +31,7 @@ export const Fundament = () => (
             {m.n}
           </div>
           <div className="flex flex-col items-center gap-2 sm:gap-3 text-center">
-            <span className="text-xl font-bold tracking-tightish leading-tight text-text-1 mb-1 sm:mb-2">{m.title}</span>
+            <span className="text-xl font-bold tracking-tight leading-tight text-text-1 mb-1 sm:mb-2">{m.title}</span>
             {m.sub && (
               <span className="mono text-xs sm:text-lg tracking-[.1em] sm:tracking-[.13em] uppercase text-primary bg-primary/12 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full">
                 {m.sub}

@@ -35,7 +35,7 @@ export const KonzeptStoryline = () => (
       {acts.map((a) => (
         <div key={a.n} className="card-base flex flex-col gap-3 p-7">
           <div className="mono text-[11px] tracking-[.22em] text-primary uppercase">{a.n}</div>
-          <h3 className="text-xl font-bold tracking-tightish">{a.title}</h3>
+          <h3 className="text-xl font-bold tracking-tight">{a.title}</h3>
           <p className="text-text-2 text-[15px] leading-relaxed">{a.body}</p>
         </div>
       ))}

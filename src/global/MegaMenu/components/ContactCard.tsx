@@ -30,7 +30,7 @@ const ContactCard = ({
       </span>
     </div>
     <div className="mt-5 mono text-[10px] tracking-[.22em] text-text-3 uppercase">{label}</div>
-    <div className="text-lg sm:text-xl font-bold tracking-tightish mt-1.5 break-all">
+    <div className="text-lg sm:text-xl font-bold tracking-tight mt-1.5 break-all">
       {value}
     </div>
     <div className="text-text-3 text-[13px] mt-3">{hint}</div>
