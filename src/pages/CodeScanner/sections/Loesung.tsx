@@ -123,7 +123,7 @@ return (
       />
     </article>
     <Caption>Die Übersicht verdichtet alle drei Workflow-Bereiche zu einer einzigen Handlungsempfehlung – der „empfohlene nächste Schritt" als roter Faden durch das Tool.</Caption>
-        <article className="mt-20 sm:mt-28 reveal hidden 2xl:block">
+        <article className="mt-20 sm:mt-28 reveal hidden xl:block">
       <div className="max-w-275">
         <ItemHeading ix="9.5" ixTone="success" label="Prototyp" title="CodeScanner zum Anfassen" />
         <p className="lede">
@@ -131,7 +131,7 @@ return (
         </p>
       </div>
        <div className="mt-12 sm:mt-16 rounded-md border border-border-2 bg-grouped-1 " style={{ boxShadow: 'var(--shadow-card)' }}>
-        <div className="relative w-full aspect-video overflow-hidden rounded-md bg-bg-1">
+        <div className="relative w-full overflow-hidden rounded-md bg-bg-1">
           <iframe
             key={src}
             src={src}
