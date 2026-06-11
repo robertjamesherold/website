@@ -1,4 +1,4 @@
-import { Component } from '@/components';
+/* import { Component } from '@/components';
 import { hooks } from '@/hooks';
 
 const FIGMA_LIGHT =
@@ -33,3 +33,4 @@ export const Prototyp = () => {
     </section>
   );
 };
+ */

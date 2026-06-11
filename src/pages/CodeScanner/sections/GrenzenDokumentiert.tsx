@@ -20,7 +20,7 @@ const cardShadow = 'var(--shadow-card)';
 export const GrenzenDokumentiert = () => (
   <section className="section-y container-x reveal" data-node-id="88:16639">
     <Component.SectionHeading
-      num="13"
+      num="12"
       label="Kritische Reflexion"
       title="Grenzen bewusst dokumentiert"
       sub="Methodische & inhaltliche Einschränkungen sind keine Schwächen, sondern Teil des gestaltungsorientierten Charakters dieser Arbeit."
