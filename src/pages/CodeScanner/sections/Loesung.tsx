@@ -131,7 +131,7 @@ return (
         </p>
       </div>
        <div className="mt-12 sm:mt-16 rounded-md border border-border-2 bg-grouped-1 " style={{ boxShadow: 'var(--shadow-card)' }}>
-        <div className="relative w-full aspect-16/12 overflow-hidden rounded-md bg-bg-1">
+        <div className="relative w-full aspect-16/11 overflow-hidden rounded-md bg-bg-1">
           <iframe
             key={src}
             src={src}
