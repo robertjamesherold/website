@@ -123,7 +123,7 @@ return (
       />
     </article>
     <Caption>Die Übersicht verdichtet alle drei Workflow-Bereiche zu einer einzigen Handlungsempfehlung – der „empfohlene nächste Schritt" als roter Faden durch das Tool.</Caption>
-        <article className="mt-20 sm:mt-28 reveal hidden xl:block">
+        <article className="mt-20 sm:mt-28 reveal hidden 2xl:block">
       <div className="max-w-275">
         <ItemHeading ix="9.5" ixTone="success" label="Prototyp" title="CodeScanner zum Anfassen" />
         <p className="lede">
