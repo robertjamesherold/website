@@ -36,6 +36,7 @@ export const Hero = () => (
           <Component.ResponsiveImg
             image={Images.HomeImages.Hero}
             alt="Portrait Robert James Herold"
+            sizes="(min-width: 1024px) 45vw, 320px"
             loading="eager"
             fetchPriority="high"
             className="w-full max-w-[320px] lg:max-w-none h-auto lg:h-full object-cover"
