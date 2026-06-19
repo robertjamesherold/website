@@ -9,6 +9,7 @@ export const MegaMenu = ({
   open,
   route  ,
   onClose,
+  onOverview,
   onMouseEnter,
   onMouseLeave,
 }: {
@@ -16,6 +17,7 @@ export const MegaMenu = ({
   open: boolean;
   route  : string;
   onClose: () => void;
+  onOverview?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 }) => {
@@ -44,7 +46,7 @@ export const MegaMenu = ({
       data-lenis-prevent
       onMouseEnter={() => isDesktop() && onMouseEnter?.()}
       onMouseLeave={() => isDesktop() && onMouseLeave?.()}
-      className={`absolute left-0 right-0 top-full border-t border-border-2 bg-bg-1/95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.4)] origin-top transition-all duration-300 h-[calc(100dvh-73px)] md:h-auto md:max-h-[75vh] overflow-y-auto overscroll-contain ${
+      className={`absolute left-0 right-0 top-full bg-bg-2/95 backdrop-blur-md shadow-[var(--shadow-pop)] origin-top transition-all duration-300 h-[calc(100dvh-73px)] md:h-auto md:max-h-[75vh] overflow-y-auto overscroll-contain ${
         visible
           ? 'opacity-100 translate-y-0 pointer-events-auto'
           : 'opacity-0 -translate-y-3 pointer-events-none'
@@ -62,7 +64,7 @@ export const MegaMenu = ({
         </div>
 
         {type === 'projects' ? (
-          <Sections.Projects route={route} />
+          <Sections.Projects route={route} onOverview={onOverview} />
         ) : type === 'contact' ? (
           <Sections.Contact />
         ) : (
@@ -71,7 +73,7 @@ export const MegaMenu = ({
               <div className="mono text-[11px] tracking-[.22em] text-text-3 uppercase mb-5">
                 Arbeitsproben
               </div>
-              <Sections.Projects route={route} />
+              <Sections.Projects route={route} onOverview={onOverview} />
             </section>
             <section>
               <div className="mono text-[11px] tracking-[.22em] text-text-3 uppercase mb-5">

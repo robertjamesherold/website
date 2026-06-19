@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Icon } from '@/assets/icons';
 import { hooks } from '@/hooks';
+import { getLenis } from '@/hooks/useSmoothScroll';
 import { MegaMenu } from '../MegaMenu';
 import { NavBackdrop } from './NavBackdrop';
 import type { MenuType } from '../MegaMenu/types';
@@ -27,6 +28,9 @@ export const NavBar = () => {
   // Pathname captured when the menu opened, so we can tell a plain close
   // (stay → restore scroll) apart from a close caused by navigating away.
   const lockedPathRef = useRef(pathname);
+  // Set when the menu closes via "Zurück zur Übersicht" on the homepage: the
+  // close should land at the top instead of restoring the opened-at position.
+  const resetToTopRef = useRef(false);
 
   const cancelClose = () => {
     if (closeTimer.current !== null) {
@@ -50,6 +54,13 @@ export const NavBar = () => {
     setActiveMenu((cur) => (cur === m ? null : m));
   };
 
+  // "Zurück zur Übersicht" while already on the homepage: close the menu and
+  // scroll back to the top (instead of restoring the position it was opened at).
+  const goToOverview = () => {
+    resetToTopRef.current = true;
+    setActiveMenu(null);
+  };
+
   useEffect(() => {
     if (activeMenu !== null) {
       scrollYRef.current = window.scrollY;
@@ -67,10 +78,18 @@ export const NavBar = () => {
       document.body.style.right = '';
       document.body.style.overflow = '';
 
-      // Only restore the locked scroll position when the menu closes on the
-      // SAME page. If the menu closed because the user navigated to another
-      // route, leave it to ScrollToTop so the new page starts at the top.
-      if (pathname === lockedPathRef.current) {
+      if (resetToTopRef.current) {
+        // "Zurück zur Übersicht" on the homepage: send the page to the top.
+        // Unlocking the body already drops native scroll to 0; we only need to
+        // keep Lenis in sync so it doesn't snap back to the opened-at position.
+        resetToTopRef.current = false;
+        const lenis = getLenis();
+        if (lenis) lenis.scrollTo(0, { immediate: true, force: true });
+        window.scrollTo(0, 0);
+      } else if (pathname === lockedPathRef.current) {
+        // Only restore the locked scroll position when the menu closes on the
+        // SAME page. If the menu closed because the user navigated to another
+        // route, leave it to ScrollToTop so the new page starts at the top.
         const html = document.documentElement;
         const prevBehavior = html.style.scrollBehavior;
 
@@ -91,7 +110,13 @@ export const NavBar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-bg-2 border-b border-border-2">
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+          activeMenu !== null
+            ? 'bg-bg-2/95 border-transparent'
+            : 'bg-bg-2/95 border-border-2'
+        }`}
+      >
         <div className="mx-auto max-w-440 px-6 sm:px-10 lg:px-20 py-4 flex items-center">
           <a
             href="/"
@@ -189,6 +214,7 @@ export const NavBar = () => {
           open={activeMenu === 'projects'}
           route={route}
           onClose={() => setActiveMenu(null)}
+          onOverview={goToOverview}
           onMouseEnter={cancelClose}
           onMouseLeave={scheduleClose}
         />
@@ -207,6 +233,7 @@ export const NavBar = () => {
           open={activeMenu === 'all'}
           route={route}
           onClose={() => setActiveMenu(null)}
+          onOverview={goToOverview}
         />
       </nav>
 

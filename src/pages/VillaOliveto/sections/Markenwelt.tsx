@@ -49,7 +49,7 @@ export const Markenwelt = () => (
                   image={b.img}
                   sizes="(min-width: 640px) 30vw, 100vw"
                   alt={`Villa Oliveto – Flasche ${b.label}`}
-                  className="h-[100%] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.55)]"
+                  className="h-[100%] w-auto object-contain drop-shadow-[var(--drop-product)]"
                 />
               </div>
               <figcaption className="mono text-[11px] tracking-[.22em] text-text-3 uppercase text-center">
@@ -108,7 +108,7 @@ export const Markenwelt = () => (
             <Component.ResponsiveImg
               image={Img.Instagram}
               alt="Villa Oliveto – Instagram-Auftritt"
-              className="block max-w-full w-auto h-auto max-h-160 object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.55)]"
+              className="block max-w-full w-auto h-auto max-h-160 object-contain drop-shadow-[var(--drop-product)]"
             />
           </div>
           <Caption center>

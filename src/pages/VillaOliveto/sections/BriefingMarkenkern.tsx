@@ -32,7 +32,7 @@ export const BriefingMarkenkern = () => (
             image={Images.VillaOlivetoImages.Bottle}
             sizes="(min-width: 1024px) 40vw, 100vw"
             alt="Villa Oliveto – Flasche Traditionale mit Olivenbaum-Logo"
-            className="h-[90%] w-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)]"
+            className="h-[90%] w-auto object-contain drop-shadow-[var(--drop-product)]"
           />
         </div>
         <Caption>

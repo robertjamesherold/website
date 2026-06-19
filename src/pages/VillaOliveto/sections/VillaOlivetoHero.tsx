@@ -36,7 +36,7 @@ export const VillaOlivetoHero = () => (
       </div>
     </div>
 
-    <div className="mt-16 sm:mt-20 rounded-md overflow-hidden border border-border-2 bg-grouped-1 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+    <div className="mt-16 sm:mt-20 rounded-md overflow-hidden border border-border-2 bg-grouped-1 shadow-[var(--shadow-hero)]">
       <Component.ResponsiveImg
         image={Images.VillaOlivetoImages.Thumbnail}
         sizes="(min-width: 1760px) 1720px, 100vw"

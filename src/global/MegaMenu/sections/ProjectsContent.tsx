@@ -4,10 +4,24 @@ import { Icon } from '@/assets/icons';
 import { Styles } from '@/styles';
 import { Data } from '@/data';
 
-const ProjectsContent = ({ route }: { route: string }) => (
+const ProjectsContent = ({
+  route,
+  onOverview,
+}: {
+  route: string;
+  onOverview?: () => void;
+}) => (
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
     <Link
       to="/"
+      onClick={(e) => {
+        // Already on the homepage: don't navigate (route stays the same) —
+        // close the menu and scroll back to the top instead.
+        if (route === 'home') {
+          e.preventDefault();
+          onOverview?.();
+        }
+      }}
       style={Styles.stagger(0)}
       className="menu-item-stagger group relative md:row-span-2 rounded-md overflow-hidden border border-border-2 shadow-[var(--shadow-card)] hover:border-primary/50 transition flex flex-col justify-between min-h-[260px] p-6"
       css-bg=""

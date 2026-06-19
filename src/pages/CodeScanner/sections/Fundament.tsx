@@ -20,7 +20,7 @@ export const Fundament = () => (
     <Component.SectionHeading num="03" label="Empirische Grundlage" title="Das Fundament" />
 
     {/* Methods — numbered steps on a connector line */}
-    <div className="relative flex flex-col items-center gap-10 sm:grid sm:grid-cols-3 sm:items-stretch sm:gap-0 mt-16 sm:mt-24 mb-16 sm:mb-24 px-2 sm:px-12">
+    <div className="relative flex flex-col items-center gap-10 sm:grid sm:grid-cols-3 sm:items-stretch sm:gap-0 mt-16 sm:mt-24 mb-16 sm:mb-24">
       <div className="hidden sm:block absolute top-8 left-[8%] right-[8%] h-px bg-border-1" />
       {methods.map((m) => (
         <div key={m.n} className={`relative z-10 flex flex-col items-center gap-3 sm:gap-6 ${m.n === '01' ? 'sm:items-start' : m.n === '02' ? 'sm:items-center' : 'sm:items-end'}`}>
@@ -49,12 +49,12 @@ export const Fundament = () => (
     >
       {stats.map((s, i) => (
         <div key={s.value} className="bg-grouped-1 px-6 sm:px-12 py-10 sm:py-16 flex flex-col gap-7">
-          <div className="flex items-center gap-5 sm:gap-9 max-[400px]:flex-col max-[400px]:items-start max-[400px]:gap-3">
-            <span className="font-extrabold tracking-[-0.035em] text-primary leading-none shrink-0 min-w-0 sm:min-w-45"
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-9">
+            <span className="font-extrabold tracking-[-0.035em] text-primary leading-none shrink-0 lg:min-w-45"
               style={{ fontSize: 'clamp(3.5rem, 2rem + 3.4vw, 5.5rem)' }}>
               {s.value}%
             </span>
-            <span className="text-lg sm:text-xl leading-snug text-text-2 text-pretty">{s.label}</span>
+            <span className="min-w-0 break-words text-lg sm:text-xl leading-snug text-text-2 text-pretty">{s.label}</span>
           </div>
           <div className="h-2 bg-grouped-2 rounded-full overflow-hidden">
             <div
