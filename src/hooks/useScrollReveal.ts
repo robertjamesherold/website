@@ -27,7 +27,12 @@ type ScrollRevealOptions = {
  *   );
  */
 export const useScrollReveal = <T extends HTMLElement = HTMLDivElement>({
-  threshold = 0.15,
+  // threshold is a fraction of the *element*. For sections taller than the
+  // viewport (e.g. on mobile), 15% of the element can exceed 100% of the
+  // viewport, so the observer would never fire and the element stays hidden.
+  // Use 0 + a negative bottom rootMargin so it reveals as the top scrolls in,
+  // regardless of element height.
+  threshold = 0,
   rootMargin = '0px 0px -10% 0px',
   once = true,
 }: ScrollRevealOptions = {}) => {

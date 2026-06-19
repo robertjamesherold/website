@@ -19,7 +19,7 @@ const ContactCard = ({
     rel={rel}
     aria-label={ariaLabel}
     style={typeof Styles.stagger === 'function' ? Styles.stagger(index) : undefined}
-    className="menu-item-stagger group relative flex flex-col rounded-md overflow-hidden border border-border-2 bg-grouped-1 shadow-[var(--shadow-card)] hover:border-primary/50 hover:-translate-y-0.5 transition p-6 sm:p-7 min-h-[180px]"
+    className="menu-item-stagger group relative flex flex-col rounded-md overflow-hidden border border-border-2 bg-grouped-1 shadow-[var(--shadow-card)] hover:border-primary/50 hover:-translate-y-0.5 transition p-6 md:p-7 min-h-[180px]"
   >
     <div className="flex items-start justify-between">
       <span className="inline-flex w-11 h-11 items-center justify-center rounded-md bg-primary/15 border border-primary/30 text-primary-soft">
@@ -30,7 +30,7 @@ const ContactCard = ({
       </span>
     </div>
     <div className="mt-5 mono text-[10px] tracking-[.22em] text-text-3 uppercase">{label}</div>
-    <div className="text-lg sm:text-xl font-bold tracking-tight mt-1.5 break-all">
+    <div className="text-lg lg:text-xl font-bold tracking-tight mt-1.5 [overflow-wrap:anywhere]">
       {value}
     </div>
     <div className="text-text-3 text-[13px] mt-3">{hint}</div>

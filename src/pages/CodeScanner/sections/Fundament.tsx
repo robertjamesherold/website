@@ -49,7 +49,7 @@ export const Fundament = () => (
     >
       {stats.map((s, i) => (
         <div key={s.value} className="bg-grouped-1 px-6 sm:px-12 py-10 sm:py-16 flex flex-col gap-7">
-          <div className="flex items-center gap-5 sm:gap-9">
+          <div className="flex items-center gap-5 sm:gap-9 max-[400px]:flex-col max-[400px]:items-start max-[400px]:gap-3">
             <span className="font-extrabold tracking-[-0.035em] text-primary leading-none shrink-0 min-w-0 sm:min-w-45"
               style={{ fontSize: 'clamp(3.5rem, 2rem + 3.4vw, 5.5rem)' }}>
               {s.value}%

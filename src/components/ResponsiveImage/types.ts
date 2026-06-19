@@ -41,4 +41,13 @@ export type ResponsiveImgProps = Omit<
    * `zoomable` to keep the image interactive (omits `data-no-zoom`).
    */
   zoomable?: boolean;
+  /**
+   * Art direction: a genuinely different composition to serve above
+   * `desktopMedia`. When set, the component renders a <picture> so the choice
+   * is viewport-driven (media query), not pixel-driven (srcSet). The base
+   * `image` becomes the mobile fallback.
+   */
+  desktopImage?: ResponsiveSource | ThemedSource;
+  /** Media query that selects `desktopImage`. Default `(min-width: 768px)`. */
+  desktopMedia?: string;
 };

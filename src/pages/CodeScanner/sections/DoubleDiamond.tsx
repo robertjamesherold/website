@@ -12,6 +12,8 @@ export const DoubleDiamond = () => (
 
     <Component.ResponsiveImg
       image={Images.KiCodeImages.DoubleDiamond}
+      desktopImage={Images.KiCodeImages.DoubleDiamondDesktop}
+      desktopMedia="(min-width: 640px)"
       sizes="100vw"
       alt="Adaptiertes Double-Diamond-Modell: Problemraum (Erkunden, Definieren) und Lösungsraum (Entwickeln, Verdichten) mit den Meilensteinen Forschungserkenntnis, Problem verstanden, Gestaltungsanforderungen, Konzept evaluiert und Designkonzept – ergänzt um die durchgängige Methode „KI-gestützte Ideation“."
       className="w-full h-auto mt-14 sm:mt-20"

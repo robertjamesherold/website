@@ -50,7 +50,7 @@ export const MegaMenu = ({
       }`}
       style={{ transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)' }}
     >
-      <div className="mx-auto max-w-[1760px] px-6 sm:px-10 lg:px-20 py-8 sm:py-10">
+      <div className="mx-auto max-w-[1760px] px-6 md:px-10 lg:px-20 py-8 md:py-10">
         <div className="flex items-baseline justify-between mb-6">
           <div className="mono text-[11px] tracking-[.22em] text-text-3 uppercase">
             {label}

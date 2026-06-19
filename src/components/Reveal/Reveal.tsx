@@ -7,7 +7,11 @@ type RevealProps = {
   duration?: string;
   /** Delay before the transition starts (e.g. 'delay-100'). */
   delay?: string;
-  /** How much of the element must be visible before revealing (0–1). */
+  /**
+   * How much of the element must be visible before revealing (0–1).
+   * Defaults to 0: sections taller than the viewport (common on mobile) can
+   * never satisfy a fractional threshold, which would leave them stuck hidden.
+   */
   threshold?: number;
   className?: string;
   /** Render as a different element (default 'div'). */
@@ -22,7 +26,7 @@ export const Reveal = ({
   children,
   duration = 'duration-700',
   delay = '',
-  threshold = 0.15,
+  threshold = 0,
   className = '',
   as: Tag = 'div',
 }: RevealProps) => {

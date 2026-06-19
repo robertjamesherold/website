@@ -28,7 +28,7 @@ const MiniTile = ({
         <Component.ResponsiveImg
           image={work.image.source}
           alt={work.image.alt}
-          sizes="(min-width: 1024px) 15vw, (min-width: 640px) 30vw, 50vw"
+          sizes="(min-width: 1024px) 15vw, (min-width: 768px) 30vw, 90vw"
           className={`absolute inset-0 w-full h-full object-cover transition-transform duration-300 ${
             active ? 'grayscale' : 'group-hover:scale-[1.04]'
           }`}
@@ -46,7 +46,7 @@ const MiniTile = ({
           )}
         </div>
         {active && (
-          <span className="absolute top-3 right-3 mono text-[9px] tracking-[.22em] uppercase bg-bg/80 text-text-1 border border-1 rounded-full px-2.5 py-1">
+          <span className="absolute bottom-3 right-3 mono text-[9px] tracking-[.22em] uppercase bg-bg/80 backdrop-blur-md text-text-1 border border-1 rounded-full px-2.5 py-1">
             aktuelle Seite
           </span>
         )}

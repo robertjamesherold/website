@@ -33,10 +33,6 @@ const cols: Col[] = [
   { title: 'ACCENT', swatches: [{ name: 'primary', token: '--primary' }] },
 ];
 
-const spacingScale = [
-  ['1','4'],['2','6'],['3','8'],['4','12'],['5','16'],['6','20'],
-  ['7','24'],['8','32'],['9','40'],['10','48'],['11','64'],['12','128'],
-] as const;
 
 const typeSamples: { text: string; className: string }[] = [
   { text: 'Pagetitle - 32/36 - Bold',       className: 'text-[28px] sm:text-[32px] leading-[1.12] font-bold' },
@@ -118,61 +114,7 @@ export const DesignSystem = () => (
     </div>
 
     <Component.Subheading>Komponentengestaltung</Component.Subheading>
-    <div className="grid sm:grid-cols-2 gap-6">
-      <div className="card-base p-7 sm:col-span-2">
-        <h4 className="m-0 mb-6 text-sm text-text-3 font-medium">Spacing Scale</h4>
-        <div className="grid grid-cols-12 gap-1 sm:gap-2 items-end h-32">
-          {spacingScale.map(([n, px]) => (
-            <div key={n} className="flex justify-center items-end h-full min-w-0">
-              <div className="w-3 sm:w-4.5 bg-primary rounded-sm" style={{ height: `${Math.min(parseInt(px), 128)}px` }} />
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-12 gap-1 sm:gap-2 mt-3">
-          {spacingScale.map(([n, px]) => (
-            <div key={n} className="flex flex-col items-center gap-0.5 min-w-0">
-              <b className="text-[13px] font-semibold">{n}</b>
-              <span className="mono text-[9px] sm:text-[10px] text-text-3 tracking-tight">
-                {px}<span className="hidden sm:inline">px</span>
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="card-base p-7">
-        <h4 className="m-0 mb-6 text-sm text-text-3 font-medium">Border Radius</h4>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center pt-2">
-          {[
-            { l: 'small', px: '4px', br: '4px' },
-            { l: 'medium', px: '5px', br: '5px' },
-            { l: 'large', px: '10px', br: '10px' },
-            { l: 'round', px: '9999px', br: '50%' },
-          ].map((r) => (
-            <div key={r.l} className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/85" style={{ borderRadius: r.br }} />
-              <span className="mono text-[11px] text-text-3 text-center leading-snug">{r.l}<br />{r.px}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="card-base p-7">
-        <h4 className="m-0 mb-6 text-sm text-text-3 font-medium">Shadows</h4>
-        <div className="grid grid-cols-3 gap-3 justify-items-center pt-2">
-          {[
-            { l: 'small', sh: '0 1px 2px rgba(0,0,0,.4)' },
-            { l: 'medium', sh: '0 4px 8px rgba(0,0,0,.5)' },
-            { l: 'large', sh: '0 10px 24px rgba(0,0,0,.6)' },
-          ].map((s) => (
-            <div key={s.l} className="flex flex-col items-center gap-3.5">
-              <div className="w-12 h-12 sm:w-[60px] sm:h-[60px] bg-primary/85 border border-border-2 rounded-md" style={{ boxShadow: s.sh }} />
-              <span className="mono text-[11px] text-text-3">{s.l}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mt-8">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mt-8">
       <div className="card-base p-7 sm:p-8 flex flex-col gap-5">
         <h4 className="m-0 text-sm text-text-3 font-medium">Sidebar – erweitert & kompakt</h4>
         <Component.ResponsiveImg

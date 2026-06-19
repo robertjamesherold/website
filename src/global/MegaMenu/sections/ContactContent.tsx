@@ -3,7 +3,7 @@ import { ContactCard } from '../components/ContactCard';
 import { Data } from '@/data';
 
 const ContactContent = () => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
     <div
       style={Styles.stagger(0)}
       className="menu-item-stagger relative overflow-hidden flex flex-col justify-between min-h-[220px]"
@@ -14,7 +14,7 @@ const ContactContent = () => (
       />
       <div>
     
-        <div className="text-xl sm:text-2xl font-bold tracking-tight mt-3 leading-tight">
+        <div className="text-xl md:text-2xl font-bold tracking-tight mt-3 leading-tight">
           Lass uns reden.
         </div>
         <p className="text-text-2 text-[13px] leading-relaxed mt-3">
