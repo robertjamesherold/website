@@ -21,7 +21,8 @@ export const Fundament = () => (
 
     {/* Methods — numbered steps on a connector line */}
     <div className="relative flex flex-col items-center gap-10 sm:grid sm:grid-cols-3 sm:items-stretch sm:gap-0 mt-16 sm:mt-24 mb-16 sm:mb-24">
-      <div className="hidden sm:block absolute top-8 left-[8%] right-[8%] h-px bg-border-1" />
+      <div className="hidden sm:block absolute top-8 left-0 right-0 h-px bg-border-1" />
+
       {methods.map((m) => (
         <div key={m.n} className={`relative z-10 flex flex-col items-center gap-3 sm:gap-6 ${m.n === '01' ? 'sm:items-start' : m.n === '02' ? 'sm:items-center' : 'sm:items-end'}`}>
           <div
