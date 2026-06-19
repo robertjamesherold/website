@@ -88,6 +88,15 @@
   /* Buttons & links: ensure default snappy hover transition */
   a, button { transition-property: color, background-color, border-color, transform, opacity, box-shadow; transition-duration: 200ms; transition-timing-function: ease-out; }
 
+  /* While the theme is switching, kill every transition for one frame. The
+     color tokens swap instantly, but elements that animate background-/text-
+     color (buttons, links) would otherwise fade their *previous-theme* hover/
+     active background across the swap — e.g. the dark active bg lingering under
+     the cursor right after switching to light. theme.ts adds/removes this. */
+  html.theme-switching, html.theme-switching *, html.theme-switching *::before, html.theme-switching *::after {
+    transition: none !important;
+  }
+
   /* Reduced-motion: respect user preference */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {

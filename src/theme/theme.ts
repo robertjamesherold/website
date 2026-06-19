@@ -40,10 +40,26 @@ let isDark: boolean = preference === 'system' ? systemPrefersDark() : preference
 const listeners = new Set<() => void>();
 const emit = () => listeners.forEach((l) => l());
 
+/**
+ * Suppress CSS transitions for the single frame in which the theme swaps, so
+ * interactive elements (buttons/links) don't fade their previous-theme hover/
+ * active background across the switch. See the `.theme-switching` rule in
+ * base.css. No-op for reduced-motion (nothing transitions anyway).
+ */
+const suppressTransitionsForSwap = () => {
+  if (typeof document === 'undefined' || typeof requestAnimationFrame === 'undefined') return;
+  const el = document.documentElement;
+  el.classList.add('theme-switching');
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => el.classList.remove('theme-switching'));
+  });
+};
+
 /** Reflect the current preference onto <html> (or clear it for 'system'). */
 const applyToDocument = () => {
   if (typeof document === 'undefined') return;
   const el = document.documentElement;
+  suppressTransitionsForSwap();
   if (preference === 'system') el.removeAttribute('data-theme');
   else el.setAttribute('data-theme', preference);
 };
