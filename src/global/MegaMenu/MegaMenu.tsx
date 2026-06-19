@@ -41,6 +41,7 @@ export const MegaMenu = ({
   return (
     <div
       ref={ref}
+      data-lenis-prevent
       onMouseEnter={() => isDesktop() && onMouseEnter?.()}
       onMouseLeave={() => isDesktop() && onMouseLeave?.()}
       className={`absolute left-0 right-0 top-full border-t border-border-2 bg-bg-1/95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.4)] origin-top transition-all duration-300 h-[calc(100dvh-73px)] md:h-auto md:max-h-[75vh] overflow-y-auto overscroll-contain ${
