@@ -1,6 +1,8 @@
 import { Component } from '@/components';
 import { Images } from '@/assets/images';
 import { ImageSlider } from '../components';
+import { hooks } from '@/hooks';
+
 
 const meta: { k: string; v: string }[] = [
   { k: 'ROLLE', v: 'UX/UI Konzeption, Research, Visual Design' },
@@ -17,6 +19,7 @@ const heroSlides = [
 ];
 
 export const CodeScannerHero = () => (
+  
   <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28 reveal">
     <Component.BackLink />
     <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3">
@@ -29,7 +32,7 @@ export const CodeScannerHero = () => (
         <p className="text-xl sm:text-2xl text-text-2 mt-5 max-w-250 leading-snug">
           Ein KI-gestütztes Analyse-Tool für mehr Vertrauen in KI-generierten Code.
         </p>
-
+     
         <p className="lede mt-16">
           KI-Assistenten wie ChatGPT und Claude generieren heute massenhaft Code – schnell, plausibel und oft überzeugend.
           Doch wer prüft, ob der Code sicher, wartbar und logisch korrekt ist?
@@ -39,7 +42,7 @@ export const CodeScannerHero = () => (
           Vertrauen blind zu schenken.
         </p>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-start flex-col ">
         <div className="card-base p-7 sm:p-8 flex flex-col gap-4 h-fit">
           {meta.map((m) => (
             <div key={m.k} className="flex flex-col gap-1 sm:grid sm:grid-cols-[120px_1fr] sm:gap-5 sm:items-start text-[15px] text-text-2">
@@ -48,6 +51,11 @@ export const CodeScannerHero = () => (
             </div>
           ))}
         </div>
+           {hooks.useBreakpoint().isDesktop && (
+          <Component.Button href="https://www.robertjamesherold.me" target="_blank" rel="noopener noreferrer" variant="primary" className="mt-8 w-full" >
+            Prototypen testen 
+          </Component.Button>
+        )}
       </div>
     </div>
 
