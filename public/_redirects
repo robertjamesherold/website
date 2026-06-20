@@ -1,11 +1,15 @@
-# SPA deep-links: serve the app (HTTP 200) only for real routes.
-# Anything not listed here and not an existing file falls through to
-# Netlify's automatic 404.html with a real HTTP 404 status.
-
+# Real app routes — serve the SPA (HTTP 200).
 /                /index.html      200
 /codescanner     /index.html      200
 /schuelerhilfe   /index.html      200
 /villa-oliveto   /index.html      200
 /impressum       /index.html      200
 /datenschutz     /index.html      200
-/* /404.html 404
+
+# The 404 page itself — served with a real 404 status.
+/404             /404.html        404
+
+# Anything else doesn't exist → send the URL bar to /404 instead of keeping the
+# bad path. (Existing files are still served first, so assets aren't affected.)
+# React Router does the same on the client for in-app navigation (App.tsx).
+/*               /404             302

@@ -14,7 +14,6 @@ function App() {
           <Route path="/" element={<Pages.Home />} />
           <Route path="/codescanner" element={<Pages.CodeScanner />} />
           {/* Former standalone KI-Code case study — merged into CodeScanner. */}
-          <Route path="/ki-code" element={<Navigate to="/codescanner" replace />} />
           <Route path="/schuelerhilfe" element={<Pages.Schuelerhilfe />} />
           <Route path="/villa-oliveto" element={<Pages.VillaOliveto />} />
           <Route path="/impressum" element={<Pages.Impressum />} />
