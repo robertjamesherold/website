@@ -17,10 +17,10 @@
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0b0e13" />
     <meta name="msapplication-TileColor" content="#0b0e13" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="RJ Herold" />
-    <link rel="manifest" href="/manifest.json" />
+    <!-- Intentionally NOT a PWA: the portfolio (robertjamesherold.com / www) must
+         not be installable as an app. Only the separate prototype deploy at
+         codescanner.robertjamesherold.com ships a manifest + service worker. So:
+         no <link rel="manifest"> and no apple-mobile-web-app-capable here. -->
 
     <!-- Apply the saved theme before first paint to avoid a flash.
          Mirrors src/theme/theme.ts: 'light'/'dark' = explicit, absent = system. -->
