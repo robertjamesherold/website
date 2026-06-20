@@ -52,7 +52,7 @@ export const CodeScannerHero = () => (
           ))}
         </div>
            {hooks.useBreakpoint().isDesktop && (
-          <Component.Button href="https://www.robertjamesherold.me" target="_blank" rel="noopener noreferrer" variant="primary" className="mt-8 w-full" >
+          <Component.Button href="https://codescanner.robertjamesherold.com" target="_blank" rel="noopener" variant="primary" className="mt-8 w-full" >
             Prototypen testen 
           </Component.Button>
         )}

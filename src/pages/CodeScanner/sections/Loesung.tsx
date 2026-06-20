@@ -7,9 +7,9 @@ import type { ResponsiveSource, ThemedSource } from '@/components/ResponsiveImag
 import { hooks } from '@/hooks';
 
 const FIGMA_LIGHT =
-  'https://dulcet-axolotl-191c40.netlify.app/home';
+  'https://codescanner.robertjamesherold.com/';
 const FIGMA_DARK =
-  'https://dulcet-axolotl-191c40.netlify.app/home';
+  'https://codescanner.robertjamesherold.com/';
 
 type ImageSource = ResponsiveSource | ThemedSource;
 
@@ -138,6 +138,7 @@ return (
             title="CodeScanner – Interaktiver Figma-Prototyp"
             loading="lazy"
             allowFullScreen
+            allow="camera"
             className="absolute inset-0 w-full h-full"
           />
         </div>
