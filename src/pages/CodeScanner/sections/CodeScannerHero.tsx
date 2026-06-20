@@ -1,6 +1,6 @@
 import { Component } from '@/components';
 import { Images } from '@/assets/images';
-import { ImageSlider } from '../components';
+import { ImageSlider, PrototypeCTA } from '../components';
 import { hooks } from '@/hooks';
 
 
@@ -52,9 +52,7 @@ export const CodeScannerHero = () => (
           ))}
         </div>
            {hooks.useBreakpoint().isDesktop && (
-          <Component.Button href="https://codescanner.robertjamesherold.com" target="_blank" rel="noopener" variant="primary" className="mt-8 w-full" >
-            Prototypen testen 
-          </Component.Button>
+          <PrototypeCTA className="mt-8" />
         )}
       </div>
     </div>
